@@ -1,6 +1,14 @@
 body{
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+background-image: linear-gradient(to top, #97a97c, #9caf81, #a2b587, #a7bb8c, #adc192, #b2c697, #b6ca9d, #bbcfa2, #c0d3a8, #c5d8ad, #cadcb3, #cfe1b9);   
+/* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+} 
+
+
+body{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
+
 *{   
     margin: 0;
     padding: 0;
@@ -10,39 +18,39 @@ body{
 figure{
     display: flex;
     justify-content: center;
-   padding-bottom: 30px;
-   padding-top: 20px;
+   /* padding-bottom: 30px; */
+   padding-top: 10px;
 }
 
 figure img{
     width: 200px;
 }
 
+/* Navbar */
+
 nav {
     display: flex;
     justify-content: space-evenly;
     position: sticky;
     top: 0;
-    background-color:#b5c3c0 ;
-    padding-bottom: 10px;
+    background-color: #373b3e39 ;
 }
 
 nav a{
-    /* color: rgb(25, 25, 59); */
+    border-radius: 10px;
     text-decoration: none;
-    font-size: large;
-    color: #359381;
-    border:#359381;
-    border-radius: 5px;
-    font-weight: 900;
+    font-size: 20px;
+    padding: 10px;
+    color: #000;
 }
 
 a:hover{
-    background: #359381;
-    color: #fff;
-    transition: 500ms;
-    scale: 1.3;
+    background-color: #B5C99A;
+    scale: 0.8;
+    transition: 700ms;
 }
+
+/* home */
 
 .home{
     display: flex;
@@ -58,6 +66,9 @@ a:hover{
    margin-left: 20px;
    width: 500px;
    margin-top: 20px;
+   /* width: 70%;
+   height: 50%; */
+   /* width: clamp(200px, 75%, 450px); */
 }
 
 .home h2{
@@ -71,6 +82,8 @@ a:hover{
     margin-top: 20px;
 }
 
+/* section */
+
 section{
     text-align: center;
     padding-bottom: 20px;
@@ -81,85 +94,273 @@ section p{
     padding-top: 30px;
 }
 
-@media(max-width: 420px){
-    figure{
-        margin-top: -15px;
-    }
-    figure img{
-        width: 200px;
-    }
-    .home{
-        margin-right: 10px;
-    }
-    .home div{
-        padding: 70px;
-       padding-left: 40px;
-    }
-    .home h2{
-        font-size: 10px;
-    }
-    .home input{
-        width: 100px;
-        height: 20px;
-        margin-top: 7px;
-    }
-    section{
-        padding-bottom: 10px;
-        padding-top: 30px;
-    }
-    section h3{
-        font-size: medium;
-    }
-    section p{
-        font-size: smaller;
-    padding-top: 10px;
-    }
-}
+
 .best-selling{
-    padding-top: 30px0;
+    padding-top: 30px;
 }
 .best-selling h3{
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-bottom: 20px;
+    text-align: center;
+    margin-top: -30px;
+    padding-top: 20px;
+    /* padding-left: 20px; */
+    padding-bottom: 20px; 
 }
-.group-cards{
+
+.Books-group{
  display: flex;
  justify-content: space-evenly;
  padding-bottom: 20px;
 }
 
 .Books{
-    height: 350px;
+    height: 360px;
     border: 2px solid black;
     background-color: #e5edf3;
     border-radius: 5px;
     padding-bottom: 10px;
 }
 .Books img{
-    width: 300px;
-    height: 350px;
+    width: 305px;
+    height: 356px;
     border-radius: 5px;
-    filter: opacity(0.9);
+    /* filter: opacity(0.9); */
 }
 
-.Books h6{
+.Books-group h6{
+    background-color: #373b3e98;
     position: relative;
     top: -120px;
     text-align: center;
     padding: 10px;
-    font-weight: bolder;
-    font-size: larger;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.Books-group h6:hover{
+    background-color: #B5C99A;
+    scale: 0.9;
+    transition: 700ms;
 }
 
 .Books button{
-    background: #373b3e39;
+    background: #373b3ecb;
     color: rgb(255, 255, 255);
     width: 10vw;
-    height: 7vh;
+    height: 5vh;
     display: block;
     margin: 0 auto;
     position: relative;
     top: -120px;
     border: none;
+}
+
+button:hover{
+    background-color: #B5C99A;
+    scale: 0.9;
+    transition: 700ms;
+}
+.card-group{
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+#Books{
+    position: relative;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    font-size: x-large;
+}
+.card-group .card{
+    width:400px;
+    height: 500px;
+    padding: 30px;
+    background-color: #e5edf3;
+    margin: 10px;
+    border: 1px solid #436E92;
+}
+.card-img-top{
+    width: 323px;
+    height: 350px;
+}
+.card .card-body{
+    background-color: #434343;
+}
+.card-body .card-title{
+    background-color: #373b3e39;
+    color: white;
+    text-align: center;
+    height: 60px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+.card button{
+    background-color: #373b3e9e;
+    color: rgb(255, 255, 255);
+    height: 7vh;
+    width: 10vw;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* connect */
+
+.connect{
+    margin-top: 50px;
+    background-color: #e5edf3;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.connect h3{
+    padding-bottom: 20px;
+    background-color: #e5edf3;
+}
+
+.connect img{
+    width: 40px;
+    background-color: #e5edf3;
+}
+
+/* footer */
+
+footer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer p{
+    font-size: medium;
+}
+
+footer :first-child{
+    font-size: large;
+}
+
+footer div a{
+    color: #000;
+    display: block;
+    font-size: medium;
+}
+
+footer img{
+    width: 200px;
+    height:120px
+}
+
+/* for mobile screen */
+
+@media screen and (max-width: 420px){
+
+    figure{
+        margin-top: -15px;
+    }
+    figure img{
+        width: 100px;
+        padding-top: 10px;
+    }
+    .home img{
+        width: 200px;
+        height: 140px;
+        padding-right: 20px;
+    }
+    .home{
+        margin-right: 10px;
+    }
+    .home div{
+        padding: 40px;
+        width: 400px;
+        margin-left: -30px;
+       /* padding-left: 40px; */
+    }
+    .home h2{
+        font-size: 20px;
+    }
+    .home input{
+        width: 130px;
+        height: 25px;
+        margin-top: 7px;
+    }
+
+    section{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    section h3{
+        font-size: 25px;
+    }
+    section p{
+        font-size: 15px;
+        padding-top: 5px;
+    }
+
+    /* best seller */
+   .Books-group{
+    display: grid;
+    margin-left: 10px;
+    }
+   .Books{
+    margin-bottom: 30px;
+    }
+   .Books img{
+    width: 305px;
+    height: 356px;
+   }
+   .Books button{
+    width: 20vw;
+    height: 5vh;
+    display: block;
+    margin: 0 auto;
+   }
+
+/* book collection */
+.card-group{
+    display: grid;
+    margin-left: 22px;
+}
+.card-group .card{
+    margin-bottom: 90px;
+    margin-top: 40px;
+    width: 320px;
+    height: 470px;
+    margin-left: 0px;
+}
+.card .card-title{
+    height: 40px;
+    font-size: small;
+    padding-top: 3px;
+}
+.card button{
+    background-color: #373b3ebb;
+    color: rgb(255, 255, 255);
+    width: 20vw;
+    height: 5vh;
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+footer div{
+    padding: 10px;
+}
+footer img{
+    width: 150px;
+    height: 100px;
+    /* padding: 10px ; */
+    margin-top: 90px; 
+    margin-right: 30px;
+    filter: drop-shadow(2px 2px 20px aqua);
+    
+    }
+    footer div p{
+        margin-top: 40px;
+    }
+    footer div .ppp{
+        margin-top: -15px;
+    }
 }
